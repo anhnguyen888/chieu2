@@ -26,7 +26,10 @@ include_once 'app/views/share/header.php';
             <tbody>
                 <?php while ($row = $products->fetch(PDO::FETCH_ASSOC)) : ?>
                     <tr>
-                        <th><?= $row['id'] ?></th>
+                        <th>
+                            <?= $row['id'] ?>
+                            <a class="btn btn-danger" href="/chieu2/cart/add/<?= $row['id'] ?>">ADD TO CART</a>
+                        </th>
                         <th><?= $row['name'] ?></th>
                         <th><?= $row['description'] ?></th>
                         <th>
